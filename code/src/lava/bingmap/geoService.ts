@@ -93,13 +93,13 @@ export function initCache(locs: StringMap<ILocation>) {
 
 export var settings = {
     // Maximum Bing requests at once. The Bing have limit how many request at once you can do per socket.
-    MaxBingRequest: 6,
+    MaxBingRequest: 15, // From 6 to 15, Allow more parallel API call(for temp fix Unlocatable issue)
 
     // Maximum cache size of cached geocode data.
-    MaxCacheSize: 3000,
+    MaxCacheSize: 10000, // From 3000 to 10000, Increase cahe storage (for temp fix Unlocatable issue)
 
     // Maximum cache overflow of cached geocode data to kick the cache reducing.
-    MaxCacheSizeOverflow: 1000,
+    MaxCacheSizeOverflow: 5000,
             
     // Bing Keys and URL
     BingKey: "Your key here",
